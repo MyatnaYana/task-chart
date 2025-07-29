@@ -1,0 +1,17 @@
+replicaCount: 3
+
+image:
+  repository: myatnayana/neoflex_task
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+  nodePort: 30080
+
+containerPort: 8080
+
+appLabels:
+  app: neoflex-task
